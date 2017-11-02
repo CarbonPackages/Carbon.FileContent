@@ -6,7 +6,7 @@ Carbon.FileContent Package for Neos CMS
 [![License](https://poser.pugx.org/carbon/filecontent/license)](LICENSE)
 
 
-Fusion Prototype
+Fusion Prototypes
 -----------------
 
 ### [Carbon.FileContent:FileContent](Resources/Private/Fusion/FileContent.fusion)
