@@ -7,13 +7,18 @@
 
 # Carbon.FileContent Package for Neos CMS
 
+| Version | Neos        |
+| ------- | ----------- |
+| 0.5\*   | 2.\*        |
+| > 1.1   | 3.\* + 4.\* |
+
 ## Fusion Prototypes
 
-### [Carbon.FileContent:FileContent](Resources/Private/Fusion/FileContent.fusion)
+### [Carbon.FileContent:FileContent](Resources/Private/TypoScript/FileContent.ts2)
 
 This prototype read a file from a `path` or `resource`. Used for including the files inline.
 
-### [Carbon.FileContent:HashOfFile](Resources/Private/Fusion/HashOfFile.fusion)
+### [Carbon.FileContent:HashOfFile](Resources/Private/TypoScript/HashOfFile.ts2)
 
 This prototype read a file from a `path` or `resource` and return a md5 based string.
 
@@ -23,6 +28,12 @@ Most of the time you have to make small adjustments to a package (e.g., the conf
 
 ```bash
 composer require carbon/filecontent --no-update
+```
+
+To install the package under Neos 2.\* you have to enter
+
+```bash
+composer require "carbon/filecontent:^0.5"--no-update
 ```
 
 The `--no-update` command prevent the automatic update of the dependencies. After the package was added to your theme `composer.json`, go back to the root of the Neos installation and run `composer update`. Et voilà! Your desired package is now installed correctly.

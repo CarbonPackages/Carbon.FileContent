@@ -1,5 +1,5 @@
 <?php
-namespace Carbon\FileContent\Fusion;
+namespace Carbon\FileContent\TypoScript;
 
 /*
  * This file is part of the Carbon.FileContent package.
@@ -10,12 +10,13 @@ namespace Carbon\FileContent\Fusion;
  * information, please view the LICENSE file which was distributed with this
  * source code.
  */
-use Neos\Flow\Annotations as Flow;
-use Neos\Fusion\FusionObjects\AbstractFusionObject;
-use Neos\Utility\Files;
+
+use TYPO3\Flow\Annotations as Flow;
+use TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScriptObject;
+use TYPO3\Flow\Utility;
 
 
-class FileContentImplementation extends AbstractFusionObject
+class FileContentImplementation extends AbstractTypoScriptObject
 {
 
     /**
@@ -25,7 +26,7 @@ class FileContentImplementation extends AbstractFusionObject
      */
     public function getPath()
     {
-        return $this->fusionValue('path');
+        return $this->tsValue('path');
     }
 
     /**
@@ -35,7 +36,7 @@ class FileContentImplementation extends AbstractFusionObject
      */
     public function getResource()
     {
-        return $this->fusionValue('resource');
+        return $this->tsValue('resource');
     }
 
     /**
@@ -53,7 +54,7 @@ class FileContentImplementation extends AbstractFusionObject
 
         $path = $this->getPath();
         if ($path) {
-            return Files::getFileContents($path);
+            return Utility\Files::getFileContents($path);
         }
 
         return false;

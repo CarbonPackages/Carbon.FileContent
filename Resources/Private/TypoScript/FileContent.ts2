@@ -1,0 +1,5 @@
+prototype(Carbon.FileContent:FileContent) < prototype(TYPO3.TypoScript:Value) {
+  @class = 'Carbon\\FileContent\\TypoScript\\FileContentImplementation'
+  path = null
+  resource = null
+}

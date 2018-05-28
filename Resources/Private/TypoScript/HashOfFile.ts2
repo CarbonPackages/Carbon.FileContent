@@ -1,4 +1,4 @@
-prototype(Carbon.FileContent:HashOfFile) < prototype(Neos.Fusion:Value) {
+prototype(Carbon.FileContent:HashOfFile) < prototype(TYPO3.TypoScript:Value) {
     path = null
     resource = null
 
