@@ -7,6 +7,8 @@
 
 # Carbon.FileContent Package for Neos CMS
 
+**Deprecated. Please use [Carbon.Eel](https://github.com/CarbonPackages/Carbon.Eel#filecontent-helper)**
+
 | Version | Neos        |
 | ------- | ----------- |
 | 0.5\*   | 2.\*        |

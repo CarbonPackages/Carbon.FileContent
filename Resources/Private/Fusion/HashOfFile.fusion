@@ -2,16 +2,8 @@ prototype(Carbon.FileContent:HashOfFile) < prototype(Neos.Fusion:Value) {
     path = null
     resource = null
 
-    @context {
-        path = ${this.path}
-        resource = ${this.resource}
-    }
+    pathHash = ${Carbon.FileContent.pathHash(this.path)}
+    resourceHash = ${Carbon.FileContent.resourceHash(this.resource)}
 
-    value = Neos.Fusion:Value {
-        fileContent = Carbon.FileContent:FileContent {
-            path = ${path}
-            resource = ${resource}
-        }
-        value = ${(path || resource) && this.fileContent ? String.md5(this.fileContent) : ''}
-    }
+    value = ${this.pathHash || this.resourceHash || ''}
 }
