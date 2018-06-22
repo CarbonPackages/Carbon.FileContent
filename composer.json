@@ -29,6 +29,7 @@
             "Carbon\\FileContent\\": "Classes"
         }
     },
+    "abandoned": "carbon/eel",
     "extra": {
         "marketplace-account": "me@jonnitto.ch",
         "installer-name": "Carbon.FileContent",
